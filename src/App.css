@@ -1,0 +1,286 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins&family=Roboto:wght@400;500;700&family=Yatra+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins&family=Roboto:wght@400;500;700&display=swap');
+
+
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+*{
+  font-family: 'Yatra One', cursive;
+  box-sizing: border-box;
+  color: whitesmoke;
+  padding: 0;
+  margin: 0;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.app{
+  width: 100%;
+  background: url("../src/assets/bg.png");
+  background-size: contain;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+   min-height: 100vh;
+    animation: gradientAnimation 3s ease-in-out infinite;
+}
+ion-icon{
+  color: #29ABDF;
+  font-size: 30px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 0;
+  padding: 0 23px;
+  height: fit-content;
+  align-items: center;
+}
+.hero{
+  color: orangered;
+  background-color: rgba(0, 0, 0, 0.22);
+  margin-bottom: 3rem;
+  border-radius: 0.4rem;
+}
+
+.header >img {
+  width: 18%;
+}
+.header a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 1.1rem;
+  border: 1px solid #29ABDF;
+  border: none;
+  background-color: transparent;
+  width: 30vw;
+  max-width: 200px;
+  transition: 0.2s;
+  font-size: 100%;
+  border: 1px solid transparent;
+  box-shadow: #29ABDF 0px 0px 20px 0px inset;
+}
+.header a:hover{
+  color: #29ABDF;
+  transition: 0.2s;
+  box-shadow: white 0px 0px 20px 0px inset;
+}
+
+.logo
+{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  align-items: center;
+  margin: 0;
+}
+
+.announce{
+  margin: 40px 12px;
+}
+
+.loader{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 80%;
+  right: 50%;
+}
+
+.announce h1{
+  /* background: -webkit-linear-gradient(0deg, rgb(255, 255, 0),red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  display: inline-block;
+  background: linear-gradient(white, #29ABDF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.announce h2{
+  font-size: 1.5rem;
+}
+
+.hr{
+  display: none;
+}
+.announce span{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: space-between;
+}
+.save-time h2{
+  padding-left: 13px;
+  font-size: 2.2rem;
+}
+.announce p{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 1% 8%;
+}
+
+.summary{
+  min-height: 200px;
+}
+
+form{
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 1.3rem;
+  margin: 1rem 2rem;
+  width: 90%;
+  max-width: 820px;
+  margin: auto;
+  font-size: medium;
+  font-weight: 600;
+  /* border: 1px solid #29ABDF; */
+  box-shadow: #29ABDF 0px 0px 60px 0px;
+}
+
+.input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  width: 67%;
+  margin-left: 0.4rem;
+}
+form input[type='url']{
+  color: white;
+  width: 100%;
+  margin-left: 0.5rem;
+ height: 38px;
+ border: none;
+ background: transparent;
+}
+form input[type='url']:focus{
+  outline: none;
+}
+
+form button{
+  color: azure;
+  width: 33%;
+  max-width: 150px;
+  height: 38px;
+  border-top-right-radius: 1.3rem;
+  border-bottom-right-radius: 1.3rem;
+  border: none;
+  background-image: linear-gradient(to right, #29ABDF, darkviolet);
+  transition: 1s ease-in-out;
+}
+form button:hover{
+ cursor: pointer;
+  background-image: linear-gradient(to right,  darkviolet,rgb(41, 171, 223));
+}
+
+.summary-output{
+  margin: 3rem auto;
+  background-color: rgb(41, 171, 223,0.23);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 900px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+
+.summary-output h1{
+  margin-bottom: 1rem;
+}
+
+.history{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 820px;
+  margin: 1.5rem auto;
+  border: 1px solid #29ABDF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.8rem;
+  gap: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+.history > h3{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-weight: 500;
+}
+.past-url{
+  display: flex;
+   width: 100%;
+   gap: 1rem;
+   border-bottom: 1px solid #29ABDF;
+   align-items: center;
+   padding-bottom: 1rem
+}
+.past-url:last-child{
+  border: none;
+}
+.past-url p{
+  color: white;
+  width: 90%;
+  word-wrap: break-word;
+  overflow: wrap;
+}
+
+.history-head{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width : 550px) {
+
+  form input[type = 'url']{
+    font-size: large;
+    padding: 0;
+    height : 54px;
+  }
+    form button {
+      font-size: large;
+      padding: 0;
+      height: 54px;
+    }
+}
+
+@media screen and (max-width : 550px){
+  .announce h1{
+    font-size: 3rem;
+  }
+  .annouce{
+    width: 80%;
+    margin: 0 20px;
+  }
+}
